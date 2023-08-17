@@ -1,4 +1,6 @@
+
 ## Tracking Twitch.tv/Quin69's Chat-Requested Songs
+View this page at: https://orare.github.io/quin-playlist-tracker/
 
 This project tracks songs requested in Twitch.tv/Quin69's chat! It builds a playlist of viewer-requested songs using Sheepfarmer's chat logs.
 
