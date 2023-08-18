@@ -52,12 +52,15 @@ function displayCurrentSong(song) {
 function displayQueue(queue, currentSong) {
     const queueElement = document.getElementById("queue");
     queueElement.innerHTML = ""; 
+	
+	let songFound = false;
 
     for (const song of queue) {
         const li = document.createElement("li");
         const link = document.createElement("a");
 
         if (song === currentSong) {
+			songFound = true;
 			break;
         } else {
             link.textContent = song;
@@ -68,7 +71,11 @@ function displayQueue(queue, currentSong) {
         li.appendChild(link);
         queueElement.appendChild(li);
     }
-
+	if (!songFound)
+	{
+		queueElement.innerHTML = ""; 
+	}
+		
     if (queueElement.childElementCount === 0) {
         const emptyMessage = document.createElement("li");
         emptyMessage.textContent = "The queue is empty.";
