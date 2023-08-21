@@ -78,7 +78,7 @@ function displayQueue(queue, currentSong) {
 		
     if (queueElement.childElementCount === 0) {
         const emptyMessage = document.createElement("li");
-        emptyMessage.textContent = "The queue is empty.";
+        emptyMessage.textContent = "The stream is currently not using song request.";
         queueElement.appendChild(emptyMessage);
     }
 }
